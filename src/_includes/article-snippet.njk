@@ -1,0 +1,23 @@
+<li>
+    <article class="snippet">
+      <a href="{{ post.url }}" class="">
+        <div class="zoom">
+           <img src="{{ post.data.image }}" alt="{{post.data.imageAlt}}" class="">
+        </div>
+      </a>
+      <div class="snippet-body">
+        <div class="cat">
+          <p class="snippet_category"> {{ post.data.category }}</p>
+          <p class="snippet_date">{{ post.date | postDate }}</p>
+        </div>
+         <p class="snippet_author"> By {{ post.data.author }}</p>
+         
+       
+        <!-- <p class="snippet__body">{{ post.data.description }}</p>  -->
+        <a href="{{ post.url }}" class="">
+          <h3 class="snippet__title"> {{ post.data.title }} </h3> 
+        </a>
+      </div>
+      
+  </article>
+   </li>

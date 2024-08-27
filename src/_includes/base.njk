@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicond.png" type="image/x-icon">
+    <meta name="description" content="{{ pagedecribe }}">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    {% include 'header.njk' %}
+    <main>
+       
+        <div>
+          {{ content | safe }} 
+        </div>
+       
+       
+      </main>
+      {% include 'footer.njk' %}
+
+      
+</body>
+<script src="/bundle.js"></script>
+</html>

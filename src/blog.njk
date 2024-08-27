@@ -1,0 +1,37 @@
+---
+title: Blog | Victor Fawole
+layout: 'base.njk'
+desc: Victor Fawole | Expert Web3 writer, growth lead, and content manager. Boost visibility and credibility with compelling content.
+---  
+
+
+       
+<section>
+  <div class="container-large">
+      <div class="padding-global">
+        <div class="section mg-top">
+          <h1 class="section-title">OUR THOUGHTS</h1>
+          <div class="sec-tag">
+            <p>Interview</p>
+          </div>
+          <ul role="list" class="articles__list flow">
+            {%- for post in collections.post | reverse -%}
+               {% include 'article-snippet.njk' %}
+            {%- endfor -%}
+          </ul>
+        </div>
+
+        <div class="section mg-top">
+          <div class="sec-tag">
+            <p>Article</p>
+          </div>
+          <ul role="list" class="articles__list flow">
+            {%- for post in collections.interview | reverse -%}
+               {% include 'article-snippet.njk' %}
+            {%- endfor -%}
+          </ul>
+        </div>
+    </div>
+  </div>
+</section>
+

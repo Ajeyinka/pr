@@ -1,0 +1,56 @@
+---
+layout: 'base.njk'
+---
+       
+
+<section>
+    <div class="container-large">
+        <div class="padding-global">
+          <article class="main-article">
+             <div class="container--narrow">
+                
+                <h5 class="category"> {{ category }}</h5>
+                  <h1 class="article-title">
+                      {{ title }}
+                  </h1>
+                  
+              <figure class="main-article__figure">
+                 <img src="{{ image }}" alt="{{ imageAlt }}">
+                 <figcaption>
+                   
+                 </figcaption>
+              </figure>
+ 
+             {{content | safe }}
+ 
+ 
+ 
+            </div>
+         </article>
+        </div>
+    </div>
+ </section>
+ 
+ <section>
+    <div class="container-large">
+        <div class="padding-global">
+            <div class="section-title mid">
+                <h2 class="tit"> BLOG
+                 </h2>
+               
+                
+            </div>
+            <div>
+              <ul role="list" class="articles__list flow">
+                  {%- for post in collections.featured | reverse -%}
+                     {% include 'article-snippet.njk' %}
+                  {%- endfor -%}
+              </ul>
+            </div>
+            
+            <div class="centerd-botton">
+                <a href="/blog" class="button">Show more thoughts</a>
+            </div>
+        </div>
+    </div>
+  </section>
