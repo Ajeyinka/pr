@@ -1,39 +1,141 @@
 ---
-title: Blog | SAGE Creatives
+title:  Services | SAGE Creatives
 layout: 'base.njk'
-desc: Supporting and Amplifying GreatnCreating a Global Impact by amplifying African Creatives and brandsess
----  
+pagedecribe: Supporting and Amplifying GreatnCreating a Global Impact by amplifying African Creatives and brandsess
+--- 
 
-
-       
 <section>
-  <div class="container-large">
+    <div class="container-large">
       <div class="padding-global">
-        <div class="section mg-top">
-          <h1 class="section-title">OUR THOUGHTS</h1>
-          <div class="sec-tag">
-            <p>Interview</p>
-          </div>
-          <ul role="list" class="articles__list flow">
-            {%- for post in collections.post | reverse -%}
-               {% include 'article-snippet.njk' %}
-            {%- endfor -%}
-          </ul>
-        </div>
+         <div class="hero-text-col">
+             <h1>SERVICES</h1>
+             <h2>SERVICES</h2>
+             <h2>SERVICES</h2>
+             
+             
+         </div>
+         <img src="../assets/images/abouthero.webp" alt="" srcset="" class="about-img">
+        
+         
+      </div>
+    </div>
 
-        <div class="section mg-top">
-          <div class="sec-tag">
-            <p>Article</p>
-          </div>
-          <ul role="list" class="articles__list flow">
-            {%- for post in collections.interview | reverse -%}
-               {% include 'article-snippet.njk' %}
-            {%- endfor -%}
-          </ul>
+  </section>
+  <section id="formed">
+    <div class="container-large">
+        <div class="padding-global">
+            <div class="services">
+                <div class="servee">
+                    <img src="../assets/images/serveone.png" alt="">
+                    <div class="serve-text">
+                        <h3>Creative & Brand Development</h3>
+                        <p>We bring your ideas to life with bold, innovative strategies and striking visuals. From concept to execution, we shape compelling brand stories that connect with your audience and stand out in the market</p>
+                        <div class="serve-btm">
+                            <h4>Brand Strategy & Identity</h4>
+                            <h4>. Content Creation & Curation</h4>
+                            <h4>. Creative Project Management</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="servee comb">
+                    <img src="../assets/images/servethree.png" alt="">
+                    <div class="serve-text">
+                        <h3>Marketing & Communications</h3>
+                        <p>Amplify your brand's voice and engage your audience with strategic marketing and storytelling. We craft powerful campaigns that drive growth and build lasting connections.</p>
+                        <div class="serve-btm">
+                            <h4>Digital Marketing & PR</h4>
+                            <h4>. Community Building & Engagement</h4>
+                            <h4>. Event Planning & Campaign Management</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="servee">
+                    <img src="../assets/images/servetwo.png" alt="">
+                    <div class="serve-text">
+                        <h3>Legal Consulting for Creatives</h3>
+                        <p>Your creativity deserves protection. We provide expert legal guidance to ensure your intellectual property and business are secure, allowing you to focus on what you do best: creating.</p>
+                        <div class="serve-btm">
+                            <h4>IP Protection & Contract Negotiation</h4>
+                            <h4>. Licensing & Rights Management</h4>
+                            <h4>. Entertainment & Music Law</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</section>
+  </section>
+  <section>
+    <div class="container-large">
+        <div class="padding-global">
+            <div class="join-com">
+                <h2>Ready to elevate your brand and protect your creative work?</h2>
+                <p>We bring your ideas to life with bold, innovative strategies and striking visuals. From concept to execution, we shape compelling brand stories that connect with your audience and stand out in the market</p>
+                <div class="centerd-botton">
+                    <a href="/blog" class="button">JOIN THE COMMUNITY</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section id="formed">
+    <div class="container-large">
+        <div class="padding-global">
+          <div class="cen">
+            
+          </div>
+          
+          <div class="form-bg">
+             <form action="">
+              <fieldset>
+                <label for="artist-name"> 
+                    Artist Name
+                    <input type="text" placeholder="Enter artist name" name="artist-name" required>
+                </label>
+                <label for="genre">
+                    Genre
+                    <input type="text" placeholder="Enter genre" name="genre">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="URL">
+                    Link to Music
+                    <input type="text" placeholder="URL to music" name="URL">
+                </label>
+                <label for="how">
+                     How did you hear about us?
+                     <select name="how about" id="how about">
+                      <option value="select">Select</option>
+                      <option value="social media">social media</option>
+                      <option value="event">event</option>
+                      <option value="word on the street">word on the street</option>
+                    </select>
+                </label>
+            </fieldset>
+           
+          <fieldset>
+            <label for="email">
+                Email Address
+                <input type="email" placeholder="Enter email address" name="email">
+            </label>
+            <label for="name">
+                Full Name
+                <input type="text" placeholder="Enter full name" required name="name">
+            </label>
+        </fieldset>
+           
+          
+                
+                <input type="submit" value="Submit">
+            
+            
+       
+             </form>
+          </div>
+        </div>
+    </div>
+  </section>
+
 <section>
   <div class="container-large">
     <div class="padding-global">

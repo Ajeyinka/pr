@@ -4,17 +4,19 @@
   box-sizing: border-box;
 }
 
-
+@font-face {
+  font-family: Bison;
+  src: url(assets/bison_2/Bison-Bold\(PersonalUse\).ttf);
+}
 :root {
   --bg-clr: rgb(18,35,21);
   --bg-clr:  rgb(0, 0, 0);
   --pri-clr:rgb(32, 157, 80);
   --accent-clr:rgb(32, 157, 80);
   --ff-2: "Bricolage Grotesque", sans-serif;
-  --ff-3: "Outfit", sans-serif;
-  --ff-1:'Inter', sans-serif;
-  --fs-1: 80px;
-  --fs-2:50px;
+  --ff-1:'Bison', sans-serif;
+  --fs-1: 68px;
+  --fs-2:64px;
   --fs-3:42px;
   --fs-4:24px;
   --max-width:1240px;
@@ -72,6 +74,16 @@ dd {
 margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4{
+  text-wrap: balance;
+}
+p, li,a {
+  max-width: 90ch;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul:where([role="list"]),
 ol:where([role="list"]) {
@@ -96,7 +108,7 @@ body {
 text-rendering: optimizeSpeed;
 
 font-size: 18px;
-font-family: var(--ff-1);
+font-family: var(--ff-2);
 color: var(--pri-clr);
 background: var(--bg-clr);
 }
@@ -104,7 +116,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--ff-2);
+  font-family: var(--ff-1);
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -181,6 +193,7 @@ max-width: 100%;
 .brand-link h4{
   font-weight: 700;
   font-size: 28px;
+  font-family: var(--ff-2);
 }
 
 .brand-link h4 span{
@@ -232,6 +245,8 @@ color: var(--accent-clr);
   font-size: 16px;
   transform-origin: center;
   transition: opacity 400ms ease-in-out, font-weight 400ms ease-in;
+  text-transform: uppercase;
+  font-family: var(--ff-1);
  
 }
 
@@ -440,27 +455,28 @@ margin: 20px;
 position: relative;
 cursor: pointer;
 overflow: hidden;
-border: 2px solid var(--accent-clr);
+border: 1px solid white;
 transition: color 0.5s;
 z-index: 1;
 font-size: 17px;
-border-radius: 6px;
+border-radius: 5px;
 font-weight: 500;
-color: var(--color);
+color: white;
+background: var(--accent-clr);
 }
 
 .button:before {
 content: "";
 position: absolute;
 z-index: -1;
-background: var(--accent-clr);
+background: white;
 height: 100px;
 width: 400px;
 border-radius: 50%;
 }
 
 .button:hover {
-color: #fff;
+color: var(--accent-clr);
 }
 
 .button:before {
@@ -485,10 +501,11 @@ transition: background 0s;
 
 
 cursor: pointer;
-padding: 12px 24px;
-border: 2px solid var(--accent-clr);
-border-radius: 20px;
+padding: 8px 24px;
+border: 1px solid var(--accent-clr);
+border-radius: 4px;
 transition: all 500ms ease-in;
+font-family: var(--ff-1);
 }
 
 .btn:hover{
@@ -507,6 +524,7 @@ transition: all 500ms ease-in;
 
 .padding-global{
   padding-inline: 10px;
+  margin-bottom: 60px;
 }
 /* Hero styling*/
 
@@ -542,8 +560,10 @@ position: relative;
   position: absolute;
   color: #EFEFEF;
   max-width: 700px;
-  
+  font-family: var(--ff-2);
   text-align: center;
+  font-size: 20px;
+  font-weight: 300;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
@@ -558,6 +578,7 @@ overflow: hidden;
 padding: 10px 0;
 white-space: nowrap;
 position: relative;
+padding-bottom: 40px;
 }
 
 
@@ -594,13 +615,13 @@ margin: 0 40px;
 }
 
 .cens{
-margin-bottom: 40px;
+margin-bottom: 0px;
 text-align: center;
-font-size: var(--fs-2);
+font-size: var(--fs-1);
 }
 .description{
 max-width: 860px;
-margin-block: 40px;
+margin-block: 20px;
 margin-inline: auto;
 font-size: 16px;
 text-align: center;
@@ -681,110 +702,7 @@ margin-inline: auto;
 background: #2A2A2A;
 }
 
-fieldset {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap:30px;
-border: none;
-margin-bottom: 20px;
-}
 
-
-
-
-input{
-width:100%;
-background: transparent;
-border: 1px solid rgb(255, 255, 255);
-margin-bottom: 8px;
-color: rgb(255, 255, 255);
-background: rgb(26, 26, 26);
-padding: 14px;
-border-radius: 8px;
-margin-top: 12px;
-font-weight: 300;
-}
-
-/* textarea {
-width:100%;
-background: transparent;
-border-radius: 0px;
-border: 0px;
-border-bottom: 2px solid white;
-margin-bottom: 8px;
-color: white;
-padding: 0px;
-} */
-
-
-label{
-  color: white;
-}
-
-select {
-  margin: 12px 0 0 0;
-  width: 100%;
-}
-
-
-
-select{
-   
-  appearance: none;
-  /* safari */
-  -webkit-appearance: none;
-  /* other styles for aesthetics */
-  width: 100%;
-  border: 1px solid rgb(255, 255, 255);
-margin-bottom: 8px;
-color: #EFEFEF;
-background: rgb(26, 26, 26);
-padding: 14px;
-border-radius: 8px;
-margin-top: 12px;
-font-size: 14px;
-font-weight: 300;
-  
-}
-
-option{
-  font-size: 16px;
-  background-color: #EFEFEF;
-  color: var(--accent-clr);
-}
-
-
-::placeholder{
-  color: #EFEFEF;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-
-input:focus {
-background: var(--pri-clr);
-
-
-
-}
-
-input[type = submit]{
-width: 50%;
-font-size: 16px;
-font-weight: 300;
-transition: opacity 600ms ease;
-background: white;
-color: black;
-
-
-}
-
-.pro{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 @media(max-width:900px){
@@ -962,6 +880,11 @@ gap:20px;
 
 /*Artist */
 
+#project{
+  padding-bottom: 40px;
+ 
+}
+
 .artiste{
 position: relative;
 width:300px;
@@ -975,8 +898,8 @@ margin-left: 20px;
 position: absolute;
 right:20px;
 bottom: 20px;
-background-color: var(--pri-clr);
-color:var(--bg-clr);
+background-color: white;
+color:var(--background-clr);
 padding: 40px;
 height:var(--size);
 width:var(--size);
@@ -1133,6 +1056,8 @@ gap:100px;
 display: flex;
 flex-direction: column;
 gap:10px;
+text-transform: uppercase;
+font-family: var(--ff-1);
 }
 
 .left a{
@@ -1310,83 +1235,6 @@ margin-bottom:-200px;
 }
 
 
-#formed
-input{
-  width:100%;
-  background: transparent;
-  border-radius: 0px;
-  border: 0px;
-  border-bottom: 1px solid rgb(209, 212, 216);
-  margin-bottom: 8px;
-  color: white;
-  padding: 0px 0px 8px 16px;
-  font-size: 18px;
-}
-
-#formed label{
-  color: var(--accent-clr);
-}
-
-textarea {
-  width:100%;
-  background: transparent;
-  border-radius: 0px;
-  border: 0px;
-  border-bottom: 1px solid rgb(209, 212, 216);
-  margin-bottom: 8px;
-  color: white;
-  padding: 0px;
-  padding: 0px 0px 8px 16px;
-}
-
-
-
-
-
-
-
-#formed input[type="submit"] {
-  color: var(--pri-clr);
-  border: 0px;
-  text-align: left;
-  padding: 0px;
-  font-size: 20px;
-  margin-top: 0px;
-}
-#formed input:focus {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #D1D4D8;
- 
-  outline:none!important;
-  
- 
-}
-
-#formed textarea:focus {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #D1D4D8;
- 
-  outline:none!important;
-  
- 
-}
-
-#formed input[type = submit]{
-  margin-top: 40px;
-  width: auto;
-  font-size: var(--fs-4);
-  font-weight: 500;
-  transition: opacity 600ms ease;
-  
-}
-
-#formed input[type = submit]:hover{
-  opacity: .7;
-}
-
-
 
 
 
@@ -1507,3 +1355,223 @@ textarea {
   list-style-type: decimal;
   padding-left: 20px;
 }
+
+
+
+
+.whites{
+  background-color: white;
+}
+
+.white-center{
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.white-center h2{
+  font-size: var(--fs-3);
+}
+
+
+
+
+.form-bg{
+  background-image: url(assets/images/form-bg.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.form-bg form{
+  max-width: 600px;
+  padding-block:80px;
+  margin-inline: auto;
+}
+
+
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:30px;
+  border: none;
+  margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  input{
+  width:100%;
+  background: #1A1A1A;
+  border: 0px solid rgb(255, 255, 255);
+  margin-bottom: 8px;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 200;
+  }
+  
+  /* textarea {
+  width:100%;
+  background: transparent;
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 2px solid white;
+  margin-bottom: 8px;
+  color: white;
+  padding: 0px;
+  } */
+  
+  
+  label{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  select {
+    margin: 12px 0 0 0;
+    width: 100%;
+  }
+  
+  
+  
+  select{
+     
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 100%;
+    border: 0px solid rgb(255, 255, 255);
+  margin-bottom: 8px;
+  color: #EFEFEF;
+  background: rgb(26, 26, 26);
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 300;
+    
+  }
+  
+  option{
+    font-size: 16px;
+    background-color: #EFEFEF;
+    color: var(--accent-clr);
+  }
+  
+  
+  ::placeholder{
+    color: #EFEFEF;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  
+  input:focus {
+  
+  
+  
+  }
+  
+  input[type = submit]{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  transition: opacity 600ms ease;
+  background: white;
+  color:var(--accent-clr);
+  
+  
+  }
+
+  #formed .cen h2{
+    font-size: var(--fs-3);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .pro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ::placeholder{
+    color:#9CA3AF;
+  }
+
+  .cent{
+    max-width: 800px;
+    margin-top: 20px;
+    margin-inline: auto;
+    text-align: center;
+    font-family: var(--ff-1);
+    font-size: var(--fs-4);
+  }
+
+  .hero-text-col{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+
+  .hero-text-col h1, .hero-text-col h2{
+    font-size: var(--fs-1);
+   
+   
+  }
+
+  .about-img{
+    margin-top: 20px;
+  }
+
+  .servee{
+    display: flex;
+    gap:20px;
+    background:white;
+    padding: 20px 40px;
+    margin-bottom: 60px;
+  }
+
+  .comb{
+    padding:0px 20px 0px 0px;
+    background: transparent;
+    gap:50px;
+  }
+
+  .serve-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .serve-text h3{
+    font-size: var(--fs-3);
+  }
+
+  .serve-btm{
+    display: flex;
+    gap:20px
+  }
+
+  .join-com{
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 40px;
+  }
+
+  .join-com h2{
+    font-size: var(--fs-3);
+    margin-bottom: 10px;
+  }
+
+  .join-com p{
+    max-width: 700px;
+    margin-inline: auto;
+  }
