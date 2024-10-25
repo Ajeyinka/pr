@@ -1575,3 +1575,50 @@ fieldset {
     max-width: 700px;
     margin-inline: auto;
   }
+
+
+  @media (max-width:900px) {
+    
+.form-bg{
+  background-image: url(assets/images/form-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 40px;
+}
+
+.txt-cen{
+  position: absolute;
+  color: #EFEFEF;
+  max-width: 700px;
+  font-family: var(--ff-2);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text-col h2{
+   display: none;
+}
+.hero-text-col h1{
+   text-align: center;
+}
+
+.servee{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+.serve-btm{
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px
+}
+  }
+
